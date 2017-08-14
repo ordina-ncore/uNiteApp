@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Ordina.Ncore.Unite.Views.CountdownPage"
+             Title="{Binding Resources[CountdownPage_Title]}">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android, Windows" Value="0"/>
+                    <On Platform="iOS" Value="0, 40, 0, 0"/>
+                </OnPlatform>
+            </Grid.Margin>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="uNite" Font="36" Margin="10, 10, 0,0" FontAttributes="Bold"/>
+                <Label Text="by Ncore" Font="26" Margin="10, 0, 0,0"/>
+                <BoxView HorizontalOptions="Fill" Margin="10, 5, 100, 5" HeightRequest="1" BackgroundColor="#E78506" />
+                <Label Text="November 9" Font="16" Margin="10, 0, 0,0"/>
+                <Label Text="Ordina Belgium HQ in Mechelen" Font="16" Margin="10, 0, 0,0"/>
+            </StackLayout>
+            <Grid Grid.Row="1" VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Counter, Converter={StaticResource timespanConverter}, ConverterParameter=D}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Text="{Binding Resources[CountdownPage_Days]}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Column="1" Text="{Binding Counter, Converter={StaticResource timespanConverter}, ConverterParameter=H}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Resources[CountdownPage_Hours]}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Column="2" Text="{Binding Counter, Converter={StaticResource timespanConverter}, ConverterParameter=M}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Resources[CountdownPage_Minutes]}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Column="3" Text="{Binding Counter, Converter={StaticResource timespanConverter}, ConverterParameter=S}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="3" Text="{Binding Resources[CountdownPage_Seconds]}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

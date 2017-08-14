@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Ordina.Ncore.Unite.Views.AboutPage"
+             Title="{Binding Resources[About_Title]}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android, Windows" Value="0"/>
+                    <On Platform="iOS" Value="0, 40, 0, 0"/>
+                </OnPlatform>
+            </StackLayout.Margin>
+            <Label Text="{Binding Title}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
