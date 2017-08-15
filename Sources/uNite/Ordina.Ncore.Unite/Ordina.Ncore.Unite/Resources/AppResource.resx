@@ -138,6 +138,12 @@
   <data name="CountdownPage_Title" xml:space="preserve">
     <value>Countdown</value>
   </data>
+  <data name="OrderTickets_ActionText" xml:space="preserve">
+    <value>HERE</value>
+  </data>
+  <data name="OrderTickets_Text" xml:space="preserve">
+    <value>Get your tickets</value>
+  </data>
   <data name="SchedulePage_Title" xml:space="preserve">
     <value>Schedule</value>
   </data>

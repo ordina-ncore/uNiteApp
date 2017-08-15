@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:effects="clr-namespace:Ordina.Ncore.Unite.Effects"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Ordina.Ncore.Unite.Views.CountdownPage"
              Title="{Binding Resources[CountdownPage_Title]}">
@@ -16,7 +17,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackLayout>
                 <Label Text="uNite" Font="36" Margin="10, 10, 0,0" FontAttributes="Bold"/>
@@ -45,6 +46,17 @@
                 <Label Grid.Column="3" Text="{Binding Counter, Converter={StaticResource timespanConverter}, ConverterParameter=S}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
                 <Label Grid.Row="1" Grid.Column="3" Text="{Binding Resources[CountdownPage_Seconds]}" Font="16" VerticalOptions="Fill" HorizontalOptions="Center" />
             </Grid>
+            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="{Binding Resources[OrderTickets_Text]}" />
+                <Label Text="{Binding Resources[OrderTickets_ActionText]}" FontAttributes="Bold" VerticalOptions="Start">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GetTickets_Tapped" />
+                    </Label.GestureRecognizers>
+                    <Label.Effects>
+                        <effects:ClickableHoverEffect />
+                    </Label.Effects>
+                </Label>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

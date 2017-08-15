@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <conv:TimeSpanConverter x:Key="timespanConverter" />
 
-            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Style TargetType="Page" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="#494949" />
             </Style>
 

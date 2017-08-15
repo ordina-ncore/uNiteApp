@@ -20,7 +20,7 @@ namespace Ordina.Ncore.Unite.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResource {
@@ -121,6 +121,24 @@ namespace Ordina.Ncore.Unite.Resources {
         internal static string CountdownPage_Title {
             get {
                 return ResourceManager.GetString("CountdownPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HERE.
+        /// </summary>
+        internal static string OrderTickets_ActionText {
+            get {
+                return ResourceManager.GetString("OrderTickets_ActionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get your tickets.
+        /// </summary>
+        internal static string OrderTickets_Text {
+            get {
+                return ResourceManager.GetString("OrderTickets_Text", resourceCulture);
             }
         }
         
